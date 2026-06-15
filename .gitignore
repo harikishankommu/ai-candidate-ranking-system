@@ -1,0 +1,10 @@
+__pycache__/
+*.pyc
+.venv/
+.env
+.DS_Store
+data/candidates.jsonl
+data/candidates.jsonl.gz
+outputs/*.csv
+!outputs/submission.csv
+!outputs/top100_review.csv

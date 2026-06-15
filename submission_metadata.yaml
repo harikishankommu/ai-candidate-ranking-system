@@ -1,0 +1,50 @@
+team_name: "REPLACE_WITH_REGISTERED_TEAM_NAME"
+
+primary_contact:
+  name: "Kommu Hari Kishan"
+  email: "kommuharikishan@gmail.com"
+  phone: "+91-REPLACE_WITH_PHONE"
+
+team_members:
+  - name: "Kommu Hari Kishan"
+    email: "kommuharikishan@gmail.com"
+    role: "ML Engineer / Team Lead"
+
+github_repo: "https://github.com/harikishankommu/redrob-ai-candidate-ranker"
+sandbox_link: "REPLACE_WITH_STREAMLIT_OR_HUGGINGFACE_LINK"
+reproduce_command: "python rank.py --candidates ./data/candidates.jsonl --out ./outputs/submission.csv"
+
+compute:
+  platform: "REPLACE_WITH_YOUR_PC_MODEL"
+  cpu_cores: "REPLACE_WITH_CORE_COUNT"
+  ram_gb: "REPLACE_WITH_RAM_GB"
+  python_version: "3.12"
+  os: "Windows 11"
+  uses_gpu_for_inference: false
+  has_network_during_ranking: false
+  pre_computation_required: false
+  pre_computation_time_minutes: 0
+
+ai_tools_used:
+  - "ChatGPT"
+
+ai_usage_summary: |
+  Used ChatGPT for architecture discussion, code review, debugging, and documentation.
+  The ranking pipeline itself is deterministic, CPU-only, and makes no external API calls.
+
+methodology_summary: |
+  Evidence-based hybrid ranker that prioritizes career-history proof over self-declared
+  skill keywords. The model scores production search, retrieval, recommendation,
+  vector-infrastructure, ranking-evaluation, current-role, experience, product-company,
+  stability, logistics, and Redrob engagement signals. It separately checks profile
+  consistency using career dates, claimed experience, current-role matching, and
+  implausible expert-skill durations, heavily penalizing suspected honeypots. Candidate
+  explanations reference only profile facts and include availability concerns where
+  relevant. The full 100K JSONL pool is streamed and ranked on CPU with no network or GPU.
+
+declarations:
+  read_submission_spec: true
+  code_is_original_work: true
+  no_collusion: true
+  honeypot_check_done: true
+  reproduction_tested: true
